@@ -8,7 +8,7 @@
 
 ## 正在写的
 
-- [ ] [教程] **在 Windows 上用 Claude Code 省订阅费**：cc-switch + GLM / Kimi / 第三方中转站，配 Happy 用手机遥控 —— 第一篇就写这个
+- [x] [教程] **在 Windows 上用 Claude Code 省订阅费**：cc-switch + GLM / Kimi / 第三方中转站，配 Happy 用手机遥控 —— 2026-10-08 已写初稿，待补个人经历和花费数字
 
 ---
 
