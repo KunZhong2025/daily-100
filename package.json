@@ -1,0 +1,16 @@
+{
+  "name": "daily-100",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "每天一篇，写 100 天。Markdown 为源，同步到 GitHub 和微信公众号。",
+  "scripts": {
+    "new": "node scripts/new-post.mjs",
+    "wechat": "node scripts/md2wechat.mjs",
+    "index": "node scripts/build-index.mjs"
+  },
+  "dependencies": {
+    "highlight.js": "^11.12.0",
+    "markdown-it": "^15.0.2"
+  }
+}

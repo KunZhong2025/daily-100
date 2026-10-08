@@ -1,0 +1,20 @@
+# 仓库里统一用 LF，检出时由 git 按平台转换。
+# 不加这个，Windows 上每次提交都会出现「整个文件都改了」的假 diff。
+* text=auto eol=lf
+
+# 明确按二进制处理，别被换行转换弄坏
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.zip binary
+*.woff binary
+*.woff2 binary
+
+# 生成物不参与 diff（虽然已被 gitignore，这里再兜一层）
+wechat.html -diff
+wechat.fragment.html -diff
+
+# Markdown 里中文多，diff 时按段落显示更清楚
+*.md diff=markdown
