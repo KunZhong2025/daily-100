@@ -60,14 +60,14 @@ node scripts/build-index.mjs
 <!-- PROGRESS:START -->
 | 指标 | 数值 |
 | --- | --- |
-| 已完成 | **0 / 100** 篇 |
-| 草稿 | 1 篇 |
-| 当前连续 | 0 天 |
+| 已完成 | **1 / 100** 篇 |
+| 草稿 | 0 篇 |
+| 当前连续 | 1 天 |
 | 起始日期 | 2026-10-08 |
-| 最近更新 | — |
-| 累计字数 | 约 4,701 字 |
+| 最近更新 | 2026-10-08 |
+| 累计字数 | 约 4,557 字 |
 
-`░░░░░░░░░░░░░░░░░░░░░░░░░` 0%
+`░░░░░░░░░░░░░░░░░░░░░░░░░` 1%
 <!-- PROGRESS:END -->
 
 ## 文章索引
@@ -75,7 +75,7 @@ node scripts/build-index.mjs
 <!-- POSTS:START -->
 **2026 年 10 月**
 
-- **08** [在 Windows 上用 Claude Code：用 cc-switch 接中转站，把订阅阻力降到最低](posts/2026/2026-10-08-在-windows-上用-claude-code-省订阅费-cc-switch-接中转站/index.md) _(草稿)_ — 不折腾海外支付和网络，用 cc-switch 一键切供应商，先花小钱跑起来再说。 `Claude Code` `工具` `中转站` · 4701 字
+- **08** [在 Windows 上用 Claude Code：用 cc-switch 接中转站，把订阅阻力降到最低](posts/2026/2026-10-08-在-windows-上用-claude-code-省订阅费-cc-switch-接中转站/index.md) — 不折腾海外支付和网络，用 cc-switch 一键切供应商，先花小钱跑起来再说。 `Claude Code` `工具` `中转站` · 公众号已发 · 4557 字
 <!-- POSTS:END -->
 
 ## 授权
