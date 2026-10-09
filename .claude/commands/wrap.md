@@ -46,7 +46,7 @@ git commit -m "chore: 调整公众号配色的引用块底色"
 **提交信息末尾加上**：
 
 ```
-Co-Authored-By: Claude Sonnet 5.5 <noreply@anthropic.com>
+Co-Authored-By: Claude Code <noreply@anthropic.com>
 ```
 
 ### 5. 推送

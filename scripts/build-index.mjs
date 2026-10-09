@@ -90,10 +90,6 @@ if (dates.length) {
   }
 }
 
-const daysSinceStart = dates.length
-  ? Math.round((new Date().setHours(0, 0, 0, 0) - day(startDate)) / 86400000) + 1
-  : 0
-
 const pct = Math.min(100, Math.round((done.length / TARGET_DAYS) * 100))
 const filled = Math.round(pct / 4) // 25 格
 
