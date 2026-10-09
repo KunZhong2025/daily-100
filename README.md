@@ -60,14 +60,14 @@ node scripts/build-index.mjs
 <!-- PROGRESS:START -->
 | 指标 | 数值 |
 | --- | --- |
-| 已完成 | **1 / 100** 篇 |
+| 已完成 | **2 / 100** 篇 |
 | 草稿 | 0 篇 |
-| 当前连续 | 1 天 |
+| 当前连续 | 2 天 |
 | 起始日期 | 2026-10-08 |
-| 最近更新 | 2026-10-08 |
-| 累计字数 | 约 4,557 字 |
+| 最近更新 | 2026-10-09 |
+| 累计字数 | 约 7,364 字 |
 
-`░░░░░░░░░░░░░░░░░░░░░░░░░` 1%
+`█░░░░░░░░░░░░░░░░░░░░░░░░` 2%
 <!-- PROGRESS:END -->
 
 ## 文章索引
@@ -75,6 +75,7 @@ node scripts/build-index.mjs
 <!-- POSTS:START -->
 **2026 年 10 月**
 
+- **09** [5 块钱，用上 Opus 5.5](posts/2026/2026-10-09-几块钱也能使用上opus/index.md) — 闲鱼 5 块开 18 个月 Gemini Pro，Antigravity CLI 里直接用 Opus 5.5。 `Opus` `Antigravity` `省钱` · 公众号已发 · 2807 字
 - **08** [在 Windows 上用 Claude Code：用 cc-switch 接中转站，把订阅阻力降到最低](posts/2026/2026-10-08-在-windows-上用-claude-code-省订阅费-cc-switch-接中转站/index.md) — 不折腾海外支付和网络，用 cc-switch 一键切供应商，先花小钱跑起来再说。 `Claude Code` `工具` `中转站` · 公众号已发 · 4557 字
 <!-- POSTS:END -->
 
