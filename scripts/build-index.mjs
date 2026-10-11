@@ -141,23 +141,20 @@ if (!fs.existsSync(readmePath)) {
 }
 
 let readme = fs.readFileSync(readmePath, 'utf8')
-const before = readme
 
-readme = readme.replace(
-  /(<!-- PROGRESS:START -->)[\s\S]*?(<!-- PROGRESS:END -->)/,
-  `$1\n${progress}\n$2`
-)
-readme = readme.replace(
-  /(<!-- POSTS:START -->)[\s\S]*?(<!-- POSTS:END -->)/,
-  `$1\n${index}\n$2`
-)
-
-if (readme === before) {
+// 先验证标记块存在，再替换。「内容没变化」不等于「没找到标记」——
+// 索引内容没变时也会走到写回，不能拿字符串相等当匹配失败的信号
+const PROGRESS_RE = /(<!-- PROGRESS:START -->)[\s\S]*?(<!-- PROGRESS:END -->)/
+const POSTS_RE = /(<!-- POSTS:START -->)[\s\S]*?(<!-- POSTS:END -->)/
+if (!PROGRESS_RE.test(readme) || !POSTS_RE.test(readme)) {
   console.log('⚠️  README 里没找到标记块，没做修改')
   console.log('   需要包含：<!-- PROGRESS:START --> ... <!-- PROGRESS:END -->')
   console.log('            <!-- POSTS:START --> ... <!-- POSTS:END -->')
   process.exit(1)
 }
+
+readme = readme.replace(PROGRESS_RE, `$1\n${progress}\n$2`)
+readme = readme.replace(POSTS_RE, `$1\n${index}\n$2`)
 
 fs.writeFileSync(readmePath, readme, 'utf8')
 

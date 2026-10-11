@@ -3,6 +3,7 @@ title: "{{TITLE}}"
 date: {{DATE}}
 tags: [{{TAGS}}]
 summary: ""
+wechat_summary: ""
 cover: ""
 status: draft
 wechat: pending

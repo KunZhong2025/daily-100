@@ -135,7 +135,8 @@ if (!keepLinks) {
 // renderInline(children)，不走规则表。所以只能用 open/close 一对来包裹。
 const headingStyle = (level) => {
   if (level === 1) return `margin: 0 0 1em; font-size: 21px; font-weight: 700; line-height: 1.5; color: ${T.heading};`
-  if (level === 2) return `margin: 2em 0 0.9em; padding-left: 11px; border-left: 4px solid ${T.accent}; font-size: 19px; font-weight: 600; line-height: 1.5; color: ${T.heading};`
+  // 二级标题段前必须为 0：公众号里 h2 自带上间距会显得断层，每次都要手动归零
+  if (level === 2) return `margin: 0 0 0.9em; padding-left: 11px; border-left: 4px solid ${T.accent}; font-size: 19px; font-weight: 600; line-height: 1.5; color: ${T.heading};`
   return `margin: 1.8em 0 0.8em; font-size: 17px; font-weight: 600; line-height: 1.5; color: ${T.heading};`
 }
 md.renderer.rules.heading_open = (tokens, idx) => {
@@ -275,6 +276,9 @@ fs.writeFileSync(path.join(postDir, 'wechat.fragment.html'), html, 'utf8')
 // ── 输出预览页 ──────────────────────────────────────────────────────────────
 const title = meta.title || path.basename(postDir)
 const tagList = Array.isArray(meta.tags) ? meta.tags : []
+// 后台摘要：wechat_summary 优先（定稿时给的 120 字版），没填就退回 frontmatter 的 summary
+const summaryText = typeof meta.summary === 'string' ? meta.summary.trim() : ''
+const wechatSummary = typeof meta.wechat_summary === 'string' ? meta.wechat_summary.trim() : ''
 const imgList = [...new Set(images)]
 
 const preview = `<!doctype html>
@@ -329,11 +333,16 @@ const preview = `<!doctype html>
       <li>点上面的「复制正文」</li>
       <li>公众号后台 → 图文消息 → 正文区 <code>Ctrl+V</code></li>
       <li>检查代码块有没有换行错位，图片按上面清单手动上传</li>
-      <li>标题、摘要、封面在公众号侧单独填 —— 摘要可用 frontmatter 里的 <code>summary</code></li>
+      <li>标题、封面在公众号侧单独填；摘要在下方「后台摘要栏」卡片一键复制</li>
     </ol>
   </div>
+  ${(wechatSummary || summaryText) ? `<div class="panel">
+    <h2>后台摘要栏 · <span id="sum-count"></span> 字 <button id="copy-summary">复制摘要</button></h2>
+    <p style="margin: 8px 0 0;" id="summary-text">${escapeHtml(wechatSummary || summaryText)}</p>
+    <p style="margin: 6px 0 0; color: #8c8c8c;">来源：frontmatter 的 <code>wechat_summary</code>${wechatSummary ? '' : '（未填，暂用 <code>summary</code>）'}</p>
+  </div>` : ''}
+  <div class="tags">${tagList.map((t) => `<span>${escapeHtml(t)}</span>`).join('')}<time>${meta.date || ''}</time></div>
   <div class="phone" id="article">
-    <div class="tags">${tagList.map((t) => `<span>${escapeHtml(t)}</span>`).join('')}<time>${meta.date || ''}</time></div>
     ${html}
   </div>
 </div>
@@ -361,6 +370,18 @@ document.getElementById('copy').addEventListener('click', async (e) => {
   }
   setTimeout(() => { btn.textContent = '复制正文'; }, 2200);
 });
+const sumText = document.getElementById('summary-text');
+if (sumText) {
+  document.getElementById('sum-count').textContent = sumText.textContent.length;
+  document.getElementById('copy-summary').addEventListener('click', async (e) => {
+    const btn = e.currentTarget;
+    try {
+      await navigator.clipboard.writeText(sumText.textContent);
+      btn.textContent = '✅ 已复制，去粘贴';
+    } catch { btn.textContent = '❌ 失败'; }
+    setTimeout(() => { btn.textContent = '复制摘要'; }, 2200);
+  });
+}
 document.getElementById('copy-md').addEventListener('click', async (e) => {
   const btn = e.currentTarget;
   try {
