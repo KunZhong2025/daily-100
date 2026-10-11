@@ -1,0 +1,71 @@
+<!doctype html>
+<!--
+  公众号文章封面模板（1080×460，2.35:1）—— daily-100 系列视觉规范
+
+  填充方法：复制本文件 → 字符串替换以下 token → 存到 tmp/illustrate/<slug>/cover.html
+    {{L1_HTML}}   第一行：引导语（小字号），可含 <span class="mono">Claude Code</span>
+    {{L1_SIZE}}   第一行字号，默认 60px；标题偏长就调小
+    {{L2_HTML}}   第二行：核心词（大字号渐变），如「做产品」「省订阅费」
+    {{L2_SIZE}}   第二行字号，默认 100px；两三个字用 100px，四字以上降到 80px
+    {{L3_HTML}}   第三行：副题一行说清给读者什么，重点词包 <b>（青色）
+    {{TEXT_LEFT}} 文字区左偏移，默认 430px；按背景图主体位置调（主体在左就右移）
+    {{BG_POS}}    背景裁切位置，如 center 52%
+
+  设计规范见同目录 README.md。背景图 bg-cover.png 引用路径不要改。
+  定稿后另存一份 1:1（1080×1080）的分享卡片图时，把 #cover 尺寸改成 1080×1080
+  再截一张，文字区居中。
+-->
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #333; font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; }
+  #cover {
+    width: 1080px; height: 460px; position: relative; overflow: hidden;
+    /* 照片底 + 双重遮罩：右侧加重给标题让出可读区，底部轻微压暗 */
+    background:
+      linear-gradient(90deg, rgba(6,9,20,.10) 0%, rgba(6,9,20,.28) 38%, rgba(6,9,20,.62) 60%, rgba(6,9,20,.78) 100%),
+      linear-gradient(180deg, rgba(6,9,20,.30) 0%, rgba(6,9,20,0) 30%, rgba(6,9,20,0) 70%, rgba(6,9,20,.42) 100%),
+      url('/templates/illustrate/bg-cover.png') {{BG_POS}} / cover no-repeat,
+      #0b1020;
+  }
+  .text {
+    position: absolute; left: {{TEXT_LEFT}}; top: 50%; transform: translateY(-50%);
+    width: 600px;
+    display: flex; flex-direction: column; align-items: flex-start;
+  }
+  .bar { width: 64px; height: 7px; border-radius: 4px;
+         background: linear-gradient(90deg, #8f7bff, #5ad0c0); }
+  .l1 {
+    margin-top: 22px; font-size: {{L1_SIZE}}; font-weight: 800; color: #f2f4fb;
+    letter-spacing: 2px; line-height: 1.15; white-space: nowrap;
+    text-shadow: 0 2px 22px rgba(0,0,0,.7);
+  }
+  .l1 .mono { font-family: Consolas, 'Courier New', monospace; font-size: 0.93em;
+              color: #b9aeff; }
+  .l2 {
+    margin-top: 6px; font-size: {{L2_SIZE}}; font-weight: 800; line-height: 1.15;
+    letter-spacing: 6px;
+    background: linear-gradient(92deg, #ffffff 0%, #a89bff 55%, #6fe3d2 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    filter: drop-shadow(0 3px 18px rgba(0,0,0,.55));
+  }
+  .l3 {
+    margin-top: 18px; font-size: 28px; font-weight: 400; color: #c3cadd;
+    letter-spacing: 5px; text-shadow: 0 1px 12px rgba(0,0,0,.65);
+  }
+  .l3 b { color: #86e8d8; font-weight: 600; }
+</style>
+</head>
+<body>
+<div id="cover">
+  <div class="text">
+    <div class="bar"></div>
+    <div class="l1">{{L1_HTML}}</div>
+    <div class="l2">{{L2_HTML}}</div>
+    <div class="l3">{{L3_HTML}}</div>
+  </div>
+</div>
+</body>
+</html>

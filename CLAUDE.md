@@ -39,12 +39,20 @@
 - 图片粘贴后可能需要手动重传，预览页会提示
 - 单篇文章建议 1500–3000 字，代码块不超过 4 个
 
+## 配图
+
+- 打 `/illustrate` 生成公众号配图（1 封面 + 每章 1 卡片）：HTML 模板填充 + Playwright 截图，零成本、中文不乱码
+- 模板和设计规范在 `templates/illustrate/`（README.md 里有色彩 token 和三条硬规则），改模板只能改那里，保持 100 天系列视觉一致
+- 卡片上的命令和文字必须出自正文原句，不许编造
+- 效果实在不满意才走手动路：ChatGPT 生成无字背景图放 `templates/illustrate/` 同名替换，文字仍由模板叠
+
 ## 命令
 
 ```bash
 node scripts/new-post.mjs "标题" [--date 2026-10-08] [--tags a,b]
 node scripts/md2wechat.mjs <post-dir> [--keep-links] [--with-title]
 node scripts/build-index.mjs
+node scripts/serve.mjs [--port 8741]   # /illustrate 配图流水线的本地静态服务器
 ```
 
 ## 环境

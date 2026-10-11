@@ -10,6 +10,8 @@ wechat.fragment.html
 *.local.md
 .draft/
 .tmp/
+tmp/
+.playwright-mcp/
 
 # 系统
 Thumbs.db
