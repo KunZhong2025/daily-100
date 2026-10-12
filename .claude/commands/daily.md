@@ -53,10 +53,12 @@ node scripts/new-post.mjs "<题目>" [--tags 标签1,标签2]
 
 ## 写完之后
 
-提醒用户：
+**配图是必做步骤，不是可选项。** 正文定稿后先打 `/illustrate` 生成配图（1 封面 + 每章 1 卡片），别等排版时才发现没图。用户明确说这篇不配图的，跳过并在回复里说明。
+
+配图完成后：
 
 ```bash
 node scripts/md2wechat.mjs posts/<年>/<日期>-<slug> --open
 ```
 
-看排版效果。确认没问题再把 `index.md` 里的 `status` 改成 `done`，然后打 `/wrap` 收尾。
+看排版效果（卡片图会提示公众号后台要手动重传）。确认没问题再把 `index.md` 里的 `status` 改成 `done`，然后打 `/wrap` 收尾。

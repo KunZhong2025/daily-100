@@ -16,6 +16,10 @@ allowed-tools: Read, Edit, Glob, Grep, Bash(node:*), Bash(git:*)
 - 写完了 → 把 `status` 改成 `done`
 - 没写完 → **不要改状态，也不要提交**。草稿留在工作区，等明天继续
 
+### 1.5 配图检查（发布前最后一道闸）
+
+对每篇要提交的文章检查两处：frontmatter 的 `cover` 字段是否为空、`assets/` 下有没有图。**都没配 → 先停下问用户**：「这篇还没配图，跑 /illustrate 生成，还是这篇就不配图？」用户说不配的，如实提交；没回应就不提交这篇。
+
 ### 2. 刷新 README
 
 ```bash
