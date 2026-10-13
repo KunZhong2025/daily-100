@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<style>
+  :root {
+    --midnight: #0b1020; --ink: #f2f4fb; --body: #aab2c5; --faint: #7d869b;
+    --violet: #a89bff; --violet-deep: #8f7bff; --teal: #86e8d8; --ok: #85ec8b;
+    --line: rgba(255,255,255,.12);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #333; font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; }
+  #card {
+    width: 1080px; height: 1440px; padding: 64px 72px 0;
+    display: flex; flex-direction: column;
+    background:
+      linear-gradient(180deg, rgba(6,9,20,.86) 0%, rgba(6,9,20,.60) 42%, rgba(6,9,20,.50) 70%, rgba(6,9,20,.55) 100%),
+      url('/templates/illustrate/bg-card.png') center 40% / cover no-repeat,
+      var(--midnight);
+    position: relative; overflow: hidden;
+  }
+  .badge {
+    align-self: flex-start; display: flex; align-items: center; gap: 14px;
+    font-family: Consolas, 'Courier New', monospace;
+    font-size: 26px; font-weight: 700; color: var(--violet); letter-spacing: 4px;
+  }
+  .badge::after { content: ''; width: 120px; height: 1px; background: rgba(168,155,255,.5); }
+  .title {
+    margin-top: 30px; font-size: 104px; font-weight: 800; line-height: 1.16; color: var(--ink);
+    text-shadow: 0 2px 28px rgba(0,0,0,.65);
+  }
+  .title .hl {
+    background: linear-gradient(92deg, #a89bff 0%, #6fe3d2 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .sub { margin-top: 18px; font-size: 29px; color: #b6bdd0; letter-spacing: 1px;
+         line-height: 1.7; text-shadow: 0 1px 12px rgba(0,0,0,.6); }
+  .term {
+    margin-top: 34px; border-radius: 14px; overflow: hidden;
+    border: 1px solid rgba(255,255,255,.15); background: rgba(7,11,22,.90);
+  }
+  .term .bar {
+    display: flex; align-items: center; gap: 10px; padding: 13px 20px;
+    background: rgba(255,255,255,.06); border-bottom: 1px solid rgba(255,255,255,.09);
+  }
+  .dot { width: 15px; height: 15px; border-radius: 50%; }
+  .term .bar span { margin-left: 10px; font-size: 20px; color: var(--faint); letter-spacing: 1px; }
+  .term pre {
+    padding: 22px 30px; font-family: Consolas, 'Courier New', monospace;
+    font-size: 25px; line-height: 1.7; color: #d3dbef;
+  }
+  .term .ok { color: var(--ok); }
+  .grid {
+    margin-top: 36px; display: grid; grid-template-columns: 1fr 1fr;
+    column-gap: 56px;
+  }
+  .cell { padding: 24px 0 26px; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: 10px; }
+  .cell .cmd {
+    align-self: flex-start;
+    font-family: Consolas, 'Courier New', monospace; font-size: 26px; font-weight: 700;
+    color: var(--teal); line-height: 1.45;
+  }
+  .cell .name { font-size: 27px; font-weight: 700; color: #edf0f8; line-height: 1.5; }
+  .cell .desc { font-size: 22px; color: var(--violet); letter-spacing: 1px; }
+  .tip {
+    margin: auto -72px 0; padding: 30px 72px 34px;
+    background: rgba(14,11,34,.82); border-top: 1px solid rgba(150,136,255,.45);
+    display: flex; align-items: center; gap: 20px;
+  }
+  .tip .q { font-family: Consolas, 'Courier New', monospace; font-size: 54px; font-weight: 700;
+            color: var(--violet); line-height: .6; transform: translateY(10px); }
+  .tip .t { font-size: 30px; font-weight: 600; color: #e6e9f5; line-height: 1.6; }
+  .tip .t b { color: var(--violet); }
+</style>
+</head>
+<body>
+<div id="card">
+  <div class="badge">01 · 打卡素材</div>
+
+  <div class="title">堆沙堡的<br><span class="hl">7 句话</span></div>
+  <div class="sub">把美国家庭里家长对娃说的话直接搬过来，在真实场景里用</div>
+
+  <div class="term">
+    <div class="bar">
+      <div class="dot" style="background:#ff5f57"></div>
+      <div class="dot" style="background:#febc2e"></div>
+      <div class="dot" style="background:#28c840"></div>
+      <span>Claude Code</span>
+    </div>
+    <pre>&gt; 发给 Claude 核查了一遍语法和地道程度
+<span class="ok">✓</span> 7 句里 6 句都没问题
+<span class="ok">✓</span> make a sandcastle 完全地道</pre>
+  </div>
+
+  <div class="grid">
+    <div class="cell">
+      <div class="cmd">Do you want to build a sandcastle?</div>
+      <div class="name">想不想堆一个沙堡？</div>
+    </div>
+    <div class="cell">
+      <div class="cmd">Sweetie, let's make a sandcastle.</div>
+      <div class="name">甜心，我们来堆个沙堡吧。</div>
+    </div>
+    <div class="cell">
+      <div class="cmd">Fill up the bucket with sand.</div>
+      <div class="name">把桶装满沙子。</div>
+    </div>
+    <div class="cell">
+      <div class="cmd">Hey, presto, a sandcastle.</div>
+      <div class="name">嘿！变！一个沙堡。</div>
+      <div class="desc">唯一翻车的一句</div>
+    </div>
+  </div>
+
+  <div class="tip">
+    <div class="q">&gt;</div>
+    <div class="t">唯一翻车的是收尾那句 <b>Hey presto</b></div>
+  </div>
+</div>
+</body>
+</html>

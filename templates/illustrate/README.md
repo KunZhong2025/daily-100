@@ -36,13 +36,15 @@
 
 ## 模板 token 参考
 
-### card.html（1080×1440，截 `#card`）
+### card.html（1080×1440，截 `#card`，v2 排版驱动版）
 
-`{{BADGE}}` `{{TITLE_HTML}}` `{{SUB}}` `{{ROWS_HTML}}` `{{TERM_CMD}}` `{{TERM_LINES_HTML}}` `{{TIP_HTML}}` `{{BG_POS}}` —— 含义见模板头部注释。`ROWS_HTML` 每行是 `.row`（`.num` 序号 + `.cmd` 命令 + `.name`/`.desc`），2–4 行，多了截断。
+`{{BADGE}}` `{{TITLE_HTML}}` `{{SUB}}` `{{ROWS_HTML}}` `{{TERM_CMD}}` `{{TERM_LINES_HTML}}` `{{TIP_HTML}}` `{{BG_POS}}` —— 含义见模板头部注释。`ROWS_HTML` 每行是 `.row`（`.cmd` 大号 mono 句在上 + `.name`/`.desc` 在下，行间发丝线分隔），2–4 行，多了截断。`.num` 是可选的 mono 小序号，只用于真实分步序列。
 
-### cover.html（1080×460，截 `#cover`）
+### cover.html（1080×460，截 `#cover`，v2 面板版）
 
-`{{L1_HTML}}`（引导语）`{{L1_SIZE}}`（默认 60px）`{{L2_HTML}}`（核心词，2–4 字）`{{L2_SIZE}}`（2–3 字用 100px，4 字降到 80px）`{{L3_HTML}}`（副题）`{{TEXT_LEFT}}`（默认 430px，按背景主体位置调）`{{BG_POS}}`。
+`{{L1_HTML}}`（期号，mono + 方块前缀）`{{L1_SIZE}}`（默认 30px）`{{L2_HTML}}`（核心词，大字渐变）`{{L2_SIZE}}`（2–3 字用 100px，4 字降到 80px）`{{L3_HTML}}`（副题）`{{TEXT_LEFT}}`（面板起点，默认 480px，按背景主体位置调）`{{BG_POS}}`。文字坐右侧深色面板上，任何背景图下都可读。
+
+> v1 旧模板备份在 `designs/illustrate-v2/card-v0-old.html` / `cover-v0-old.html`。
 
 ## 截图流程（/illustrate 自动做，手改时照此）
 

@@ -2,6 +2,9 @@
 node_modules/
 package-lock.json
 
+# 第三方 agent skills（skills-lock.json 记录版本，npx skills add 可重装）
+.claude/skills/
+
 # 生成物：正文 markdown 才是唯一的源
 wechat.html
 wechat.fragment.html
