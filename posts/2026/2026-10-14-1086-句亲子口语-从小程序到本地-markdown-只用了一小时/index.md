@@ -5,7 +5,7 @@ tags: [AI, Codex, Windows, 自动化, 亲子英语]
 summary: 想把「快乐掌上学」小程序里的亲子口语句子搬出来，我先用老经验想到抓包，被 AI 劝退；最后走的是一条我没想过的路——电脑微信的辅助功能树。98 个 Day、1086 对句子，一小时落袋。
 cover: "assets/1.png"
 status: done
-wechat: pending
+wechat: published
 wechat_summary: 想搬空「快乐掌上学」里的 1086 句亲子口语，我先想到抓包，被 AI 一条条摆出坑劝退；它给的第三条路是电脑微信的辅助功能树——不抓包不 OCR，操作系统直接把原句读给你。98 个 Day 一小时落袋，含踩坑与复现命令。
 ---
 
