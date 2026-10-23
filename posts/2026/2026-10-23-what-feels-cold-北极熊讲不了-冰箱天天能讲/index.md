@@ -6,7 +6,7 @@ summary: "满书都是摸不着的雪和冰山，但冰箱就在你家厨房—�
 wechat_summary: "第二本红火箭，满书是家里没有的雪和冰山。别硬讲——它是一张感觉清单，句型只有一个：The ___ feels cold。感官词的教法就一条：摸得到。北极熊看图带过，冰箱当场打开，六句照读流程每句标音标和谐音，最后只带走一句 Does it feel cold? 用进生活。"
 cover: assets/01_公众号封面_2.35比1_1880x800.jpg
 status: done
-wechat: pending
+wechat: published
 ---
 
 ## 上一本的经验，在这一本失灵了
