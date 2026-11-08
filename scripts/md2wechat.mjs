@@ -306,7 +306,7 @@ const preview = `<!doctype html>
   .panel h2 { margin: 0 0 8px; font-size: 13px; font-weight: 600; color: #1a1a1a; }
   .panel ol { margin: 0; padding-left: 1.4em; }
   .panel code { background: #f2f4f6; padding: 1px 5px; border-radius: 3px;
-                font-family: ${T.mono}; font-size: 12px; }
+                font-family: ${T.mono}; font-size: 12px; overflow-wrap: anywhere; }
   .phone { background: #fff; border-radius: 10px; padding: 32px 24px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
   .tags { margin-bottom: 20px; padding-bottom: 16px; border-bottom: 1px solid #f0f0f0; }
   .tags span { display: inline-block; margin: 0 6px 0 0; padding: 2px 9px; font-size: 12px;
