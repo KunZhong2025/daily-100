@@ -13,7 +13,7 @@
 ```
 
 Claude 会：
-- 建好 `posts/2026/2026-XX-XX-标题/`，套上模板
+- 根据内容确定文章类型和系列，建好文章目录并套用相应大纲
 - 挑一个选题跟你确认角度（如果题目太宽泛）
 - 给出这一篇的大纲和需要你自己补的地方
 
@@ -21,7 +21,7 @@ Claude 会：
 
 ### 2. 写
 
-直接在对话里跟 Claude 一起改，或者自己打开 `index.md` 写。
+直接在对话里一起改，或者自己打开 `index.md` 写。每篇可以选择不配图、只做封面，或明确要求正文配图。儿歌音频需要在公众号后台插入并试听。
 
 **判断标准**：写完通读一遍，如果删掉所有代码块还剩不下什么东西，那这篇是教程空壳，得补自己的思考和踩坑。
 
@@ -51,6 +51,7 @@ Claude 会：
 # 建文件夹
 node scripts/new-post.mjs "文章标题"
 node scripts/new-post.mjs "文章标题" --date 2026-10-08 --tags 工具,踩坑
+node scripts/new-post.mjs "文章标题" --category "绘本讲解" --series "红火箭" --tags 亲子英语,绘本
 
 # 生成公众号排版
 node scripts/md2wechat.mjs posts/2026/2026-10-08-文章标题
@@ -68,6 +69,8 @@ node scripts/build-index.mjs
 ---
 title: "在 Windows 上用 Claude Code，我怎么绕开订阅"
 date: 2026-10-08
+category: "Claude学习"   # 文章类型，可扩展
+series: "Claude Code"     # 系列，可留空
 tags: [Claude Code, 工具]
 summary: "用 cc-switch 接第三方模型，充值 37 块钱先跑起来。"
 cover: ""                 # 封面图，可留空，公众号侧单独上传
@@ -76,7 +79,8 @@ wechat: pending           # pending → published
 ---
 ```
 
-- **`summary`** 会进 README 索引，也适合当公众号摘要。40 字以内
+- **`category` / `series`** 分别记录文章类型和所属系列；旧文章可以没有这两个字段。四种预设类型有各自的大纲，自定义类型使用通用模板；README 暂时仍按日期展示
+- **`summary`** 会进 README 索引，40 字以内；公众号摘要另填 `wechat_summary`（120 字以内）
 - **`status`** 只有改成 `done` 才会算进进度。草稿不会污染统计数据
 - **`wechat`** 用来标记这篇公众号发了没，避免重复发
 

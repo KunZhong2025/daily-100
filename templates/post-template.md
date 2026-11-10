@@ -1,6 +1,8 @@
 ---
 title: "{{TITLE}}"
 date: {{DATE}}
+category: "{{CATEGORY}}"
+series: "{{SERIES}}"
 tags: [{{TAGS}}]
 summary: ""
 wechat_summary: ""

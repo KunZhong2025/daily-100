@@ -2,7 +2,7 @@
 /**
  * 建当天文章的文件夹。
  *
- *   node scripts/new-post.mjs "标题" [--date 2026-10-08] [--tags a,b] [--force]
+ *   node scripts/new-post.mjs "标题" [--date 2026-10-08] [--category 绘本讲解] [--series 红火箭] [--tags a,b] [--force]
  */
 import fs from 'node:fs'
 import path from 'node:path'
@@ -32,12 +32,17 @@ function slugify (title) {
 }
 
 function parseArgs (argv) {
-  const out = { title: '', date: localDate(), tags: '', force: false }
+  const out = { title: '', date: localDate(), tags: '', category: '', series: '', force: false }
   const rest = []
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i]
-    if (a === '--date') out.date = argv[++i]
-    else if (a === '--force') out.force = true
+    if (a === '--date' || a === '--category' || a === '--series') {
+      if (!argv[i + 1] || argv[i + 1].startsWith('--')) {
+        console.error(`${a} 需要一个值`)
+        process.exit(1)
+      }
+      out[a.slice(2)] = argv[++i]
+    } else if (a === '--force') out.force = true
     else if (a === '--tags') {
       // 一直吃到下一个选项为止，这样 --tags Claude Code,工具 也算数
       const vals = []
@@ -49,7 +54,7 @@ function parseArgs (argv) {
   return out
 }
 
-const { title, date, tags, force } = parseArgs(process.argv.slice(2))
+const { title, date, tags, category, series, force } = parseArgs(process.argv.slice(2))
 
 if (!title) {
   console.error('用法: node scripts/new-post.mjs "文章标题" [--date 2026-10-08] [--tags 工具,折腾]')
@@ -81,10 +86,16 @@ while (fs.existsSync(path.join(dir, 'index.md')) && !force) {
 fs.mkdirSync(path.join(dir, 'assets'), { recursive: true })
 
 const tpl = fs.readFileSync(path.join(ROOT, 'templates', 'post-template.md'), 'utf8')
-const body = tpl
-  .replaceAll('{{TITLE}}', title.replace(/"/g, '\\"'))
-  .replaceAll('{{DATE}}', date)
-  .replaceAll('{{TAGS}}', tags)
+const templateNames = { 'Claude学习': 'claude-learning', '绘本讲解': 'picture-book', '儿歌': 'song', '编程与项目': 'development' }
+const templateName = Object.hasOwn(templateNames, category) ? templateNames[category] : ''
+const content = templateName && fs.readFileSync(path.join(ROOT, 'templates', 'post-types', `${templateName}.md`), 'utf8')
+const escapeField = (s) => s.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/[\r\n]/g, ' ')
+const body = (content ? tpl.replace(/(?<=\n---\n)[\s\S]*$/, '\n' + content) : tpl)
+  .replaceAll('{{TITLE}}', () => escapeField(title))
+  .replaceAll('{{DATE}}', () => date)
+  .replaceAll('{{TAGS}}', () => tags)
+  .replaceAll('{{CATEGORY}}', () => escapeField(category))
+  .replaceAll('{{SERIES}}', () => escapeField(series))
 
 fs.writeFileSync(path.join(dir, 'index.md'), body, 'utf8')
 

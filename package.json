@@ -7,6 +7,8 @@
   "scripts": {
     "new": "node scripts/new-post.mjs",
     "wechat": "node scripts/md2wechat.mjs",
+    "wechat:check": "node scripts/wechat-draft.mjs --check",
+    "wechat:draft": "node scripts/wechat-draft.mjs",
     "index": "node scripts/build-index.mjs"
   },
   "dependencies": {

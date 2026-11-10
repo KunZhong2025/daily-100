@@ -1,10 +1,10 @@
 ---
-description: 生成公众号可粘贴的排版，并打开预览
+description: 生成公众号排版；确认后可创建 API 草稿
 argument-hint: "[文章目录，留空则用最新一篇]"
 allowed-tools: Read, Glob, Grep, Bash(node:*), Bash(git status:*), Bash(ls:*), Bash(start:*)
 ---
 
-# /publish — 生成公众号排版
+# /publish — 生成公众号排版或 API 草稿
 
 指定目录：**$ARGUMENTS**
 
@@ -31,13 +31,25 @@ allowed-tools: Read, Glob, Grep, Bash(node:*), Bash(git status:*), Bash(ls:*), B
 
 **只要还剩 `<!-- TODO`，就不要生成发布版**。先告诉用户哪几处没补。
 
-### 3. 生成
+### 3. 生成并预览
 
 ```bash
 node scripts/md2wechat.mjs <post-dir> --open
 ```
 
-### 4. 告诉用户接下来做什么
+### 4. 草稿箱发布（可选）
+
+- 默认仍走预览页复制粘贴，避免没有检查过的内容直接进入草稿箱。
+- 用户明确要求「创建草稿」后，先确认 `cover` 有值或已有封面图片路径，再执行：
+
+```bash
+node scripts/wechat-draft.mjs <post-dir> --cover assets/cover.png --draft
+```
+
+- 此命令会上传封面、上传正文中的本地图片，并在公众号草稿箱创建一篇草稿；**不可在用户没明确确认时执行**。
+- 成功后仍要到草稿箱检查排版和封面，公众号的群发由用户手动完成。
+
+### 5. 告诉用户接下来做什么
 
 用简短的步骤说明，不要长篇大论：
 
@@ -48,7 +60,7 @@ node scripts/md2wechat.mjs <post-dir> --open
 4. 标题和摘要：<给出建议值>
 ```
 
-### 5. 发布后
+### 6. 发布后
 
 用户说发出去了之后，把 `index.md` frontmatter 里的 `wechat` 改成 `published`，并跑一次：
 

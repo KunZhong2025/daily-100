@@ -21,8 +21,10 @@
 - `index.md` 顶部的 frontmatter 字段：`title` `date` `tags` `summary` `cover` `status` `wechat`
   - `status`: `draft` → `done`
   - `wechat`: `pending` → `published`
+- 新文章可在 frontmatter 增加 `category` 和 `series`：`category` 建议用「Claude学习」「绘本讲解」「儿歌」「编程与项目」，可随内容扩展；`series` 是自由文本，不属于系列时可省略。`tags` 继续用于描述具体主题
+- 旧文章没有 `category` 或 `series` 也有效，不要求回填
 - 图片放同级 `assets/`，正文里用相对路径 `![](assets/xxx.png)`
-- 模板在 `templates/post-template.md`，用 `node scripts/new-post.mjs "<标题>"` 生成
+- 通用模板在 `templates/post-template.md`，分类大纲在 `templates/post-types/`；`new-post.mjs` 按 `--category` 选用大纲，自定义或未指定分类时使用通用模板
 
 ## 写作风格
 
@@ -31,6 +33,8 @@
 - 可以用短句、可以用破折号，不要写成 PPT 大纲
 - 标题不用「浅谈」「漫谈」「那些事」这类词
 - 教程类必须有：前置条件、具体命令、实际结果、踩到的坑。没写坑的教程等于没写
+- 按内容选择写作重点，不让分类限制选题：Claude学习侧重真实学习过程、操作和收获；绘本讲解侧重原文、讲读和生词；儿歌侧重歌词、含义和亲子使用场景；编程与项目侧重问题、实现和实际结果。其他类型按内容确定重点
+- 亲子英语内容重实用：教单词逐词标音标和中文谐音，句子里的新词也要补；区分美国家庭常用口语和特定场景词。原文或歌词以用户提供或可核实的材料为准，不编造
 
 ## 微信公众号的硬约束（写文章时就要考虑）
 
@@ -41,7 +45,7 @@
 
 ## 配图
 
-- 打 `/illustrate` 生成公众号配图：默认做 1 张封面；**英语练习、亲子绘本与单词学习文章只做封面，不做正文卡片**，保持简洁直接
+- 每篇配图可选，根据内容和用户意愿决定；需要配图时打 `/illustrate`，默认做 1 张封面。**英语练习、亲子绘本与单词学习文章默认只做封面，不做正文卡片**，保持简洁直接
 - 只有用户明确要求时才添加正文卡片；卡片上的命令和文字必须出自正文原句，不许编造
 - 模板和设计规范在 `templates/illustrate/`（README.md 里有色彩 token 和三条硬规则），改模板只能改那里，保持 100 天系列视觉一致
 - 效果实在不满意才走手动路：ChatGPT 生成无字背景图放 `templates/illustrate/` 同名替换，文字仍由模板叠
@@ -49,7 +53,7 @@
 ## 命令
 
 ```bash
-node scripts/new-post.mjs "标题" [--date 2026-10-08] [--tags a,b]
+node scripts/new-post.mjs "标题" [--date 2026-10-08] [--category 绘本讲解] [--series 红火箭] [--tags a,b]
 node scripts/md2wechat.mjs <post-dir> [--keep-links] [--with-title]
 node scripts/build-index.mjs
 node scripts/serve.mjs [--port 8741]   # /illustrate 配图流水线的本地静态服务器
