@@ -16,6 +16,8 @@ allowed-tools: Read, Edit, Glob, Grep, Bash(node:*), Bash(git:*)
 - 写完了 → 把 `status` 改成 `done`
 - 没写完 → **不要改状态，也不要提交**。草稿留在工作区，等明天继续
 
+**这道闸是给用户的，不是给 AI 的。** 写完正文后先交付草稿，把要用户补的 `<!-- TODO -->` 和需要他核对的地方列出来，等他回复。**不要自己把 `status` 从 `draft` 改成 `done`** 来跳过这道闸 —— 你一改，后面的提交和推送就会自动放行，未经核对的稿子会被公开。`status: done` 只在用户明确说「定稿了 / 改好了」之后才动。
+
 ### 1.5 配图检查（发布前最后一道闸）
 
 对每篇要提交的文章检查两处：frontmatter 的 `cover` 字段是否为空、`assets/` 下有没有图。**都没配 → 先停下问用户**：「这篇还没配图，跑 /illustrate 生成，还是这篇就不配图？」用户说不配的，如实提交；没回应就不提交这篇。
@@ -54,6 +56,10 @@ Co-Authored-By: Claude Code <noreply@anthropic.com>
 ```
 
 ### 5. 推送
+
+**推送前先问一句「可以推了吗？」** 得到确认再执行 `git push`。仓库是公开的，推上去就是对外发布。
+
+拉取远端（`git pull` / `git merge`）之前先看 `git log --oneline HEAD..origin/main` —— 如果远端有你本地没有的提交，合并会把你本地未推送的改动（脚本、模板、`.env.example` 等）一起公开。**先告诉用户这些文件会被推上去，等他点头再合并。**
 
 ```bash
 git push
