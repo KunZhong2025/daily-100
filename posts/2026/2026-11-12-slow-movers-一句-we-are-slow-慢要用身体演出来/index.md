@@ -6,14 +6,14 @@ series: "红火箭"
 tags: [亲子英语, 红火箭, 绘本]
 summary: "全书只有一句英文的绘本。逐页原句、扩展句、亲子动作全整理，生词标音标谐音，分清日常口语和场景词。"
 wechat_summary: "《Slow Movers》全书只有一句 We are slow，八组动物换着说。这篇把原句和扩展句分开标注，动物、动作生词全标音标与中文近似读音，分清哪些是美国家庭天天说的慢、哪些只是绘本场景词，末尾附一张 5 分钟讲读卡。"
-cover: "assets/01-cover.png"
+cover: "assets/亲子共读《Slow Movers》.png"
 status: done
-wechat: pending
+wechat: published
 ---
 
 红火箭玫红初阶的《Slow Movers》（慢慢挪的动物们），Pam Holden 著，Lamia Aziz 绘，一共 16 页。
 
-拿到书我先翻了一遍：整本书的英文只有一句话，换着动物名字说八遍。
+整本书的英文只有一句话，换着动物名字说八遍。
 
 **"We are slow," said the caterpillars.**
 
@@ -25,13 +25,11 @@ wechat: pending
 
 驴子们说："我们**也**慢。"
 
-先说结论：这本绘本的价值不在句型，全书就一个句型；它的价值在于给了你一个**必须用身体演**的理由。只要能把 slow 从"一个需要翻译的单词"变成"爸爸和娃一起放慢脚步"，这本书就已经完成了一次很实用的亲子口语训练。
+全书就一个句型，**必须用身体演**。只要能把 slow 从"一个需要翻译的单词"变成"爸爸和娃一起放慢脚步"，这本书就已经完成了一次很实用的亲子口语训练。
 
 ## 原句与讲法
 
-下面每组分三层：**原句摘录**（绘本原文）、**看图扩展**（指着画面能说的句子，不是原文）、**亲子动作**（身体怎么演）。
-
-扩展示句是用来"接话"的，不是假装成绘本上的字。
+下面每组分三层：**原句摘录**（绘本原文）、**看图扩展**（指着画面能说的句子，不是原文）、**亲子动作**（身体怎么演）。扩展示句是用来"接话"的，不是假装成绘本上的字。
 
 ### 1. 毛毛虫（第 2～3 页）
 
@@ -148,40 +146,40 @@ donkey 在之前读的《Donkey's Tail》里出现过，这里正好复习一遍
 
 ### 动物
 
-| 词 | 美式音标 · 中文近似读音 | 意思 |
-| --- | --- | --- |
-| caterpillar | /ˈkætərpɪlər/「凯特-皮尔」 | 毛毛虫 |
-| snail | /sneɪl/「斯奈尔」 | 蜗牛 |
-| hedgehog | /ˈhedʒhɔːɡ/「嘿奇-哈格」 | 刺猬 |
-| turtle | /ˈtɜːrtl/「特-拓」 | 龟 |
-| tortoise | /ˈtɔːrtəs/「托-提斯」 | 陆龟，多指陆生品种 |
-| worm | /wɝːm/「沃姆」 | 虫、蠕虫；图中是蚯蚓 |
-| hippo | /ˈhɪpoʊ/「希-剖」 | 河马 |
-| elephant | /ˈelɪfənt/「艾-勒-方特」 | 大象 |
-| donkey | /ˈdɑːŋki/「丹-基」 | 驴 |
+| 词           | 美式音标 · 中文近似读音        | 意思         |
+| ----------- | -------------------- | ---------- |
+| caterpillar | /ˈkætərpɪlər/「凯特-皮尔」 | 毛毛虫        |
+| snail       | /sneɪl/「斯奈尔」         | 蜗牛         |
+| hedgehog    | /ˈhedʒhɔːɡ/「嘿奇-哈格」   | 刺猬         |
+| turtle      | /ˈtɜːrtl/「特-拓」       | 龟          |
+| tortoise    | /ˈtɔːrtəs/「托-提斯」     | 陆龟，多指陆生品种  |
+| worm        | /wɝːm/「沃姆」           | 虫、蠕虫；图中是蚯蚓 |
+| hippo       | /ˈhɪpoʊ/「希-剖」        | 河马         |
+| elephant    | /ˈelɪfənt/「艾-勒-方特」   | 大象         |
+| donkey      | /ˈdɑːŋki/「丹-基」       | 驴          |
 
 ### 动作与外形
 
-| 词 | 美式音标 · 中文近似读音 | 意思 |
-| --- | --- | --- |
-| slowly | /ˈsloʊli/「斯漏-利」 | 慢慢地，slow 的副词 |
-| crawl | /krɔːl/「克柔」 | 爬行 |
-| wiggle | /ˈwɪɡəl/「威-狗」 | 扭动 |
-| stomp | /stɑːmp/「斯坦普」 | 重重地踩、跺脚 |
-| shell | /ʃel/「谢尔」 | 壳 |
-| feeler | /ˈfiːlər/「菲-勒」 | 触角；动物用来探路的器官 |
-| spiky | /ˈspaɪki/「斯拜-基」 | 有尖刺的 |
-| trunk | /trʌŋk/「壮克」 | 大象的鼻子 |
-| shovel | /ˈʌvəl/「沙-佛」 | 铲子 |
-| pond | /pɑːnd/「庞德」 | 池塘 |
-| slow | /sloʊ/「斯漏」 | 慢的 |
-| fast | /fæst/「法斯特」 | 快的 |
-| step | /step/「斯德普」 | 步、迈步 |
-| night | /naɪt/「奈特」 | 夜晚 |
-| down | /daʊn/「道恩」 | 向下；Slow down 是"慢下来" |
-| hide | /haɪd/「海德」 | 藏起来 |
-| ride | /raɪd/「瑞德」 | 骑 |
-| high five | /haɪ faɪv/「海-法夫」 | 击掌 |
+| 词         | 美式音标 · 中文近似读音    | 意思                  |
+| --------- | ---------------- | ------------------- |
+| slowly    | /ˈsloʊli/「斯漏-利」  | 慢慢地，slow 的副词        |
+| crawl     | /krɔːl/「克柔」      | 爬行                  |
+| wiggle    | /ˈwɪɡəl/「威-狗」    | 扭动                  |
+| stomp     | /stɑːmp/「斯坦普」    | 重重地踩、跺脚             |
+| shell     | /ʃel/「谢尔」        | 壳                   |
+| feeler    | /ˈfiːlər/「菲-勒」   | 触角；动物用来探路的器官        |
+| spiky     | /ˈspaɪki/「斯拜-基」  | 有尖刺的                |
+| trunk     | /trʌŋk/「壮克」      | 大象的鼻子               |
+| shovel    | /ˈʌvəl/「沙-佛」     | 铲子                  |
+| pond      | /pɑːnd/「庞德」      | 池塘                  |
+| slow      | /sloʊ/「斯漏」       | 慢的                  |
+| fast      | /fæst/「法斯特」      | 快的                  |
+| step      | /step/「斯德普」      | 步、迈步                |
+| night     | /naɪt/「奈特」       | 夜晚                  |
+| down      | /daʊn/「道恩」       | 向下；Slow down 是"慢下来" |
+| hide      | /haɪd/「海德」       | 藏起来                 |
+| ride      | /raɪd/「瑞德」       | 骑                   |
+| high five | /haɪ faɪv/「海-法夫」 | 击掌                  |
 
 **said** /sed/「塞德」在原句里是"某某说"。绘本用过去时讲故事，家长现场讲不必改口。
 
@@ -211,21 +209,15 @@ donkey 在之前读的《Donkey's Tail》里出现过，这里正好复习一遍
 
 ### 场景词：留在绘本里就行
 
-| 词 | 用在哪 |
-| --- | --- |
-| pond（池塘） | 户外、池塘边；家里几乎用不到 |
-| shovel（铲子） | 园艺、玩沙；家里不常出现 |
-| spiky（有刺的） | 看到仙人掌、刺猬玩具时能用 |
-| feeler（触角） | 讲蜗牛、昆虫时用 |
-| trunk（象鼻） | 动物园、玩大象玩偶；美式里 trunk 还指汽车后备箱，别混 |
+| 词          | 用在哪                            |
+| ---------- | ------------------------------ |
+| pond（池塘）   | 户外、池塘边；家里几乎用不到                 |
+| shovel（铲子） | 园艺、玩沙；家里不常出现                   |
+| spiky（有刺的） | 看到仙人掌、刺猬玩具时能用                  |
+| feeler（触角） | 讲蜗牛、昆虫时用                       |
+| trunk（象鼻）  | 动物园、玩大象玩偶；美式里 trunk 还指汽车后备箱，别混 |
 
 **trunk 一词提醒一句：** 美式日常里 trunk 更常见的第二个意思是"汽车后备箱"，碰到要看语境。
-
-### 关于"河马和大象其实跑得很快"
-
-书里把河马、大象也放进"慢"这个主题，是为了凑重复句型，不是科学结论。河马短距离冲刺能到每小时 30 公里以上，大象也能小跑。
-
-跟孩子讲的时候不必去纠正，"它们现在慢慢地走"就够。孩子如果哪天问"河马不是跑得挺快吗"，这反而是个好回答的机会——**绘本是句型练习，不是百科全书**。
 
 ## 一个游戏：Slow or Fast?
 
@@ -245,16 +237,16 @@ donkey 在之前读的《Donkey's Tail》里出现过，这里正好复习一遍
 
 上面那些扩展示句是备课用的。第一次讲给两岁的孩子，全念完太长。打印这张卡，每组页面一句观察、一个动作就够。
 
-| 页码 · 动物 | 讲这一句 | 配这个动作 |
-| --- | --- | --- |
-| 2–3 · 毛毛虫 | They're crawling up the stems! | 手指向上爬 |
-| 4–5 · 蜗牛 | They're moving so slowly! | 蹲低慢慢走 |
-| 6–7 · 刺猬 | Look! It's nighttime! | 指着月亮 |
-| 8–9 · 乌龟 | Step by step, they go! | 手指走小步 |
-| 10–11 · 蚯蚓 | Wiggle, wiggle, wiggle! | 扭扭手指 |
-| 12–13 · 河马 | Open wide! | 张大嘴巴 |
-| 14–15 · 大象 | Stomp, stomp, stomp! | 轻轻跺脚 |
-| 16 · 驴 | Clip-clop, clip-clop! | 模仿小驴走路 |
+| 页码 · 动物    | 讲这一句                           | 配这个动作  |
+| ---------- | ------------------------------ | ------ |
+| 2–3 · 毛毛虫  | They're crawling up the stems! | 手指向上爬  |
+| 4–5 · 蜗牛   | They're moving so slowly!      | 蹲低慢慢走  |
+| 6–7 · 刺猬   | Look! It's nighttime!          | 指着月亮   |
+| 8–9 · 乌龟   | Step by step, they go!         | 手指走小步  |
+| 10–11 · 蚯蚓 | Wiggle, wiggle, wiggle!        | 扭扭手指   |
+| 12–13 · 河马 | Open wide!                     | 张大嘴巴   |
+| 14–15 · 大象 | Stomp, stomp, stomp!           | 轻轻跺脚   |
+| 16 · 驴     | Clip-clop, clip-clop!          | 模仿小驴走路 |
 
 **读绘本时不用把画面里的每样东西都讲一遍。** 孩子盯着第 8～9 页可能只喜欢那两只乌龟，那就指着乌龟，用手指慢慢爬，反复说 **Slowly, slowly!**。池塘、石头、花没讲，也不影响这次共读有价值。
 
@@ -268,8 +260,9 @@ donkey 在之前读的《Donkey's Tail》里出现过，这里正好复习一遍
 
 ## 参考链接
 
-- 红火箭 Red Rocket Readers，Emergent Fiction Set B：Slow Movers（Pam Holden 绘 Lamia Aziz，Reading Level 2 / F&P Level B，16 页）
-https://www.pearson.com/en-au/subject-catalog/p/red-rocket-readers-emergent-fiction-set-b-slow-movers-reading-level-2fp-level-b/GPROG_A103000302775_learnerau-availability/9781877419010
+- 红火箭 Red Rocket Readers，Emergent Fiction Set B：Slow Movers（Pam Holden 绘 Lamia Aziz，Reading Level 2 / F\&P Level B，16 页）
+  <https://www.pearson.com/en-au/subject-catalog/p/red-rocket-readers-emergent-fiction-set-b-slow-movers-reading-level-2fp-level-b/GPROG_A103000302775_learnerau-availability/9781877419010>
 
 - Flying Start Books（红火箭出版社）Red Rocket Readers 产品目录 PDF
-https://flyingstartbooks.com/OrderForms/RedRocketReadersCatalog-2023.pdf
+  <https://flyingstartbooks.com/OrderForms/RedRocketReadersCatalog-2023.pdf>
+
