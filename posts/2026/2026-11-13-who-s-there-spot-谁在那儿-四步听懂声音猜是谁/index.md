@@ -8,7 +8,7 @@ summary: "翻翻书怎么讲才不无聊。整理十个场景的原句、拟声�
 wechat_summary: "《Who's There, Spot?》讲读笔记：十个场景的原句配翻译，knock、croak、squeak 这类拟声词标好音标和谐音。最后附一套四步讲读流程，在家门口就能玩。"
 cover: "assets/父女共读《Who is There, Spot》.png"
 status: done
-wechat: pending
+wechat: published
 ---
 
 《Who's There, Spot?》（谁在那儿，小波？），Eric Hill 著。Spot 系列的第二本，1980 年出了第一本《Where's Spot?》，作者 Eric Hill 本来是给儿子讲睡前故事编的，后来成了全世界两岁孩子都在看的启蒙书。前面读过《小波去农场》，那本是找动物。这本找声音，难度降下来了，句子更短。
