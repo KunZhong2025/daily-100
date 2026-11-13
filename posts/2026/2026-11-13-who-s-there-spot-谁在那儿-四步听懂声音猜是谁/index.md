@@ -6,7 +6,7 @@ series: "Spot 小波"
 tags: [亲子英语, 绘本, 小波]
 summary: "翻翻书怎么讲才不无聊。整理十个场景的原句、拟声词和家庭迁移用法，音标谐音齐全。"
 wechat_summary: "《Who's There, Spot?》讲读笔记：十个场景的原句配翻译，knock、croak、squeak 这类拟声词标好音标和谐音。最后附一套四步讲读流程，在家门口就能玩。"
-cover: ""
+cover: "assets/父女共读《Who is There, Spot》.png"
 status: done
 wechat: pending
 ---
