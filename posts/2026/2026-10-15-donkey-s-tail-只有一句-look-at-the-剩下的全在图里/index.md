@@ -1,6 +1,8 @@
 ---
 title: "Donkey's Tail：只有一句 Look at the...，剩下的全在图里"
 date: 2026-10-15
+category: "绘本讲解"
+series: "红火箭"
 tags: [亲子英语,红火箭,绘本]
 summary: "原文只有一句 Look at the... 的绘本怎么讲？看图说话三个问题，附逐页讲稿和照读版。"
 wechat_summary: "红火箭《Donkey's Tail》全书就一句 Look at the... 反复八次，字是骨架，故事全在图里。这篇讲清剧情，给出看图说话三问——看到什么、正在发生、一起做什么，三个场面实地示范，最后附八句照读版，五到八分钟讲完。"

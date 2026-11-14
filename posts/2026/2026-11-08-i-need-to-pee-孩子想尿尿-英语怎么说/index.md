@@ -1,6 +1,8 @@
 ---
 title: "《I Need to Pee》：孩子想尿尿，英语怎么说？"
 date: 2026-11-08
+category: "绘本讲解"
+series: "Hello Andy"
 tags: [亲子英语,绘本,学习日志]
 summary: "整理绘本摘录、生词读音，以及找厕所和尿湿裤子后的亲子口语。"
 wechat_summary: "《I Need to Pee》亲子英语备课笔记：整理故事摘录、生词音标与中文近似读音，分清 pee、potty、bathroom 的用法。出门前怎么问，找厕所时怎么接话，尿湿裤子后怎么安慰，都留几句能直接用的。"
